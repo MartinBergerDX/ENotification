@@ -1,4 +1,4 @@
-#include "ENotification.h"
+#include "notifications/ENotification.h"
 
 
 ENotification::ENotification()

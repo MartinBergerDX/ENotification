@@ -1,4 +1,4 @@
-#include "EBlock.h"
+#include "infrastructure/EBlock.h"
 
 
 EBlock::EBlock()
@@ -22,4 +22,10 @@ EBlockFunctionTypeNoParams EBlock::getFunctionNoParams()
 {
     PRINT_FUNCTION
     return _functionNoParams;
+}
+
+void EBlock::execute()
+{
+    if (!_functionNoParams) return;
+    _functionNoParams();
 }

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 HackPro. All rights reserved.
 //
 
-#include "EObject.h"
+#include "infrastructure/EObject.h"
 
 EObject::EObject()
 {

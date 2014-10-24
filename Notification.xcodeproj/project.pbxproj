@@ -22,13 +22,13 @@
 		5BF9EC7D19FA2D4A000FE417 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF9EC5C19FA2D48000FE417 /* UIKit.framework */; };
 		5BF9EC8519FA2D4A000FE417 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BF9EC8319FA2D4A000FE417 /* InfoPlist.strings */; };
 		5BF9EC8719FA2D4A000FE417 /* NotificationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9EC8619FA2D4A000FE417 /* NotificationTests.m */; };
-		5BF9EC9C19FA2D9B000FE417 /* EBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9EC9119FA2D9B000FE417 /* EBlock.cpp */; };
-		5BF9EC9D19FA2D9B000FE417 /* EComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9EC9319FA2D9B000FE417 /* EComponent.cpp */; };
-		5BF9EC9E19FA2D9B000FE417 /* ENotification.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9EC9519FA2D9B000FE417 /* ENotification.cpp */; };
-		5BF9EC9F19FA2D9B000FE417 /* ENotificationCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9EC9719FA2D9B000FE417 /* ENotificationCenter.cpp */; };
-		5BF9ECA019FA2D9B000FE417 /* ENotificationResponder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9EC9919FA2D9B000FE417 /* ENotificationResponder.cpp */; };
-		5BF9ECA119FA2D9B000FE417 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9EC9B19FA2D9B000FE417 /* Main.cpp */; };
-		5BF9ECA519FA3A3B000FE417 /* EObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9ECA319FA3A3B000FE417 /* EObject.cpp */; };
+		5BF9EDCF19FAA053000FE417 /* EBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9EDC019FAA053000FE417 /* EBlock.cpp */; };
+		5BF9EDD019FAA053000FE417 /* EBlockParamEObjectParamList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9EDC219FAA053000FE417 /* EBlockParamEObjectParamList.cpp */; };
+		5BF9EDD119FAA053000FE417 /* EComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9EDC419FAA053000FE417 /* EComponent.cpp */; };
+		5BF9EDD219FAA053000FE417 /* EObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9EDC619FAA053000FE417 /* EObject.cpp */; };
+		5BF9EDD319FAA053000FE417 /* ENotification.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9EDC919FAA053000FE417 /* ENotification.cpp */; };
+		5BF9EDD419FAA053000FE417 /* ENotificationCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9EDCB19FAA053000FE417 /* ENotificationCenter.cpp */; };
+		5BF9EDD519FAA053000FE417 /* ENotificationResponder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9EDCD19FAA053000FE417 /* ENotificationResponder.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,19 +62,20 @@
 		5BF9EC8219FA2D4A000FE417 /* NotificationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NotificationTests-Info.plist"; sourceTree = "<group>"; };
 		5BF9EC8419FA2D4A000FE417 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5BF9EC8619FA2D4A000FE417 /* NotificationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationTests.m; sourceTree = "<group>"; };
-		5BF9EC9119FA2D9B000FE417 /* EBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EBlock.cpp; path = Notification/Notification/EBlock.cpp; sourceTree = "<group>"; };
-		5BF9EC9219FA2D9B000FE417 /* EBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EBlock.h; path = Notification/Notification/EBlock.h; sourceTree = "<group>"; };
-		5BF9EC9319FA2D9B000FE417 /* EComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EComponent.cpp; path = Notification/Notification/EComponent.cpp; sourceTree = "<group>"; };
-		5BF9EC9419FA2D9B000FE417 /* EComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EComponent.h; path = Notification/Notification/EComponent.h; sourceTree = "<group>"; };
-		5BF9EC9519FA2D9B000FE417 /* ENotification.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ENotification.cpp; path = Notification/Notification/ENotification.cpp; sourceTree = "<group>"; };
-		5BF9EC9619FA2D9B000FE417 /* ENotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ENotification.h; path = Notification/Notification/ENotification.h; sourceTree = "<group>"; };
-		5BF9EC9719FA2D9B000FE417 /* ENotificationCenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ENotificationCenter.cpp; path = Notification/Notification/ENotificationCenter.cpp; sourceTree = "<group>"; };
-		5BF9EC9819FA2D9B000FE417 /* ENotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ENotificationCenter.h; path = Notification/Notification/ENotificationCenter.h; sourceTree = "<group>"; };
-		5BF9EC9919FA2D9B000FE417 /* ENotificationResponder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ENotificationResponder.cpp; path = Notification/Notification/ENotificationResponder.cpp; sourceTree = "<group>"; };
-		5BF9EC9A19FA2D9B000FE417 /* ENotificationResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ENotificationResponder.h; path = Notification/Notification/ENotificationResponder.h; sourceTree = "<group>"; };
-		5BF9EC9B19FA2D9B000FE417 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Main.cpp; path = Notification/Notification/Main.cpp; sourceTree = "<group>"; };
-		5BF9ECA319FA3A3B000FE417 /* EObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EObject.cpp; path = Notification/Notification/EObject.cpp; sourceTree = "<group>"; };
-		5BF9ECA419FA3A3B000FE417 /* EObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EObject.h; path = Notification/Notification/EObject.h; sourceTree = "<group>"; };
+		5BF9EDC019FAA053000FE417 /* EBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EBlock.cpp; sourceTree = "<group>"; };
+		5BF9EDC119FAA053000FE417 /* EBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBlock.h; sourceTree = "<group>"; };
+		5BF9EDC219FAA053000FE417 /* EBlockParamEObjectParamList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EBlockParamEObjectParamList.cpp; sourceTree = "<group>"; };
+		5BF9EDC319FAA053000FE417 /* EBlockParamEObjectParamList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBlockParamEObjectParamList.h; sourceTree = "<group>"; };
+		5BF9EDC419FAA053000FE417 /* EComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EComponent.cpp; sourceTree = "<group>"; };
+		5BF9EDC519FAA053000FE417 /* EComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EComponent.h; sourceTree = "<group>"; };
+		5BF9EDC619FAA053000FE417 /* EObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EObject.cpp; sourceTree = "<group>"; };
+		5BF9EDC719FAA053000FE417 /* EObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EObject.h; sourceTree = "<group>"; };
+		5BF9EDC919FAA053000FE417 /* ENotification.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ENotification.cpp; sourceTree = "<group>"; };
+		5BF9EDCA19FAA053000FE417 /* ENotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENotification.h; sourceTree = "<group>"; };
+		5BF9EDCB19FAA053000FE417 /* ENotificationCenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ENotificationCenter.cpp; sourceTree = "<group>"; };
+		5BF9EDCC19FAA053000FE417 /* ENotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENotificationCenter.h; sourceTree = "<group>"; };
+		5BF9EDCD19FAA053000FE417 /* ENotificationResponder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ENotificationResponder.cpp; sourceTree = "<group>"; };
+		5BF9EDCE19FAA053000FE417 /* ENotificationResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENotificationResponder.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +135,8 @@
 		5BF9EC5E19FA2D48000FE417 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
-				5BF9EC9019FA2D83000FE417 /* ENotification */,
+				5BF9EDBF19FAA053000FE417 /* infrastructure */,
+				5BF9EDC819FAA053000FE417 /* notifications */,
 				5BF9EC6719FA2D49000FE417 /* AppDelegate.h */,
 				5BF9EC6819FA2D49000FE417 /* AppDelegate.mm */,
 				5BF9EC6A19FA2D49000FE417 /* Main_iPhone.storyboard */,
@@ -176,26 +178,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5BF9EC9019FA2D83000FE417 /* ENotification */ = {
+		5BF9EDBF19FAA053000FE417 /* infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				5BF9EC9119FA2D9B000FE417 /* EBlock.cpp */,
-				5BF9EC9219FA2D9B000FE417 /* EBlock.h */,
-				5BF9EC9319FA2D9B000FE417 /* EComponent.cpp */,
-				5BF9EC9419FA2D9B000FE417 /* EComponent.h */,
-				5BF9EC9519FA2D9B000FE417 /* ENotification.cpp */,
-				5BF9EC9619FA2D9B000FE417 /* ENotification.h */,
-				5BF9EC9719FA2D9B000FE417 /* ENotificationCenter.cpp */,
-				5BF9EC9819FA2D9B000FE417 /* ENotificationCenter.h */,
-				5BF9EC9919FA2D9B000FE417 /* ENotificationResponder.cpp */,
-				5BF9EC9A19FA2D9B000FE417 /* ENotificationResponder.h */,
-				5BF9EC9B19FA2D9B000FE417 /* Main.cpp */,
-				5BF9ECA319FA3A3B000FE417 /* EObject.cpp */,
-				5BF9ECA419FA3A3B000FE417 /* EObject.h */,
+				5BF9EDC019FAA053000FE417 /* EBlock.cpp */,
+				5BF9EDC119FAA053000FE417 /* EBlock.h */,
+				5BF9EDC219FAA053000FE417 /* EBlockParamEObjectParamList.cpp */,
+				5BF9EDC319FAA053000FE417 /* EBlockParamEObjectParamList.h */,
+				5BF9EDC419FAA053000FE417 /* EComponent.cpp */,
+				5BF9EDC519FAA053000FE417 /* EComponent.h */,
+				5BF9EDC619FAA053000FE417 /* EObject.cpp */,
+				5BF9EDC719FAA053000FE417 /* EObject.h */,
 			);
-			name = ENotification;
-			path = ..;
-			sourceTree = "<group>";
+			path = infrastructure;
+			sourceTree = SOURCE_ROOT;
+		};
+		5BF9EDC819FAA053000FE417 /* notifications */ = {
+			isa = PBXGroup;
+			children = (
+				5BF9EDC919FAA053000FE417 /* ENotification.cpp */,
+				5BF9EDCA19FAA053000FE417 /* ENotification.h */,
+				5BF9EDCB19FAA053000FE417 /* ENotificationCenter.cpp */,
+				5BF9EDCC19FAA053000FE417 /* ENotificationCenter.h */,
+				5BF9EDCD19FAA053000FE417 /* ENotificationResponder.cpp */,
+				5BF9EDCE19FAA053000FE417 /* ENotificationResponder.h */,
+			);
+			path = notifications;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -295,16 +304,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BF9ECA119FA2D9B000FE417 /* Main.cpp in Sources */,
-				5BF9EC9E19FA2D9B000FE417 /* ENotification.cpp in Sources */,
-				5BF9ECA019FA2D9B000FE417 /* ENotificationResponder.cpp in Sources */,
+				5BF9EDD019FAA053000FE417 /* EBlockParamEObjectParamList.cpp in Sources */,
+				5BF9EDD119FAA053000FE417 /* EComponent.cpp in Sources */,
 				5BF9EC7219FA2D49000FE417 /* ViewController.mm in Sources */,
-				5BF9ECA519FA3A3B000FE417 /* EObject.cpp in Sources */,
-				5BF9EC9F19FA2D9B000FE417 /* ENotificationCenter.cpp in Sources */,
-				5BF9EC9D19FA2D9B000FE417 /* EComponent.cpp in Sources */,
 				5BF9EC6919FA2D49000FE417 /* AppDelegate.mm in Sources */,
 				5BF9EC6519FA2D49000FE417 /* main.m in Sources */,
-				5BF9EC9C19FA2D9B000FE417 /* EBlock.cpp in Sources */,
+				5BF9EDCF19FAA053000FE417 /* EBlock.cpp in Sources */,
+				5BF9EDD419FAA053000FE417 /* ENotificationCenter.cpp in Sources */,
+				5BF9EDD519FAA053000FE417 /* ENotificationResponder.cpp in Sources */,
+				5BF9EDD319FAA053000FE417 /* ENotification.cpp in Sources */,
+				5BF9EDD219FAA053000FE417 /* EObject.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +450,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Notification/Notification-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.9.xctoolchain/usr/include,
+					"$(SRCROOT)/",
+				);
 				INFOPLIST_FILE = "Notification/Notification-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -454,6 +468,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Notification/Notification-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.9.xctoolchain/usr/include,
+					"$(SRCROOT)/",
+				);
 				INFOPLIST_FILE = "Notification/Notification-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

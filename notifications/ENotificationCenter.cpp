@@ -1,7 +1,7 @@
-#include "ENotificationCenter.h"
 #include <cstdio>
 #include <cstring>
 #include <cassert>
+#include "notifications/ENotificationCenter.h"
 
 ENotificationCenter* ENotificationCenter::s_notificationCenter = NULL;
 
@@ -28,7 +28,7 @@ ENotificationCenter::~ENotificationCenter()
     ENotificationCenterTypeRegisteredResponder::iterator respondersIterator = _registeredResponders.begin();
     while (respondersIterator != _registeredResponders.end())
     {
-        ENotificationCenterTypeListOfResponders *list = respondersIterator->second;
+        ENotificationCenterTypeList *list = respondersIterator->second;
         while (!list->empty())
         {
             ENotificationResponder *notificationResponder = list->front();
@@ -49,7 +49,7 @@ void ENotificationCenter::cleanNotificationCenter()
     ENotificationCenterTypeRegisteredResponder::iterator respondersIterator = _registeredResponders.begin();
     while (respondersIterator != _registeredResponders.end())
     {
-        ENotificationCenterTypeListOfResponders *notificationResponderList = respondersIterator->second;
+        ENotificationCenterTypeList *notificationResponderList = respondersIterator->second;
         
         if (notificationResponderList->empty())
         {
@@ -79,28 +79,28 @@ void ENotificationCenter::addNotificationResponder(ENotificationResponder* notif
 
     // map<const string, forward_list<ENotificationResponder*>*>
     ENotificationCenterTypeRegisteredResponder::iterator it = _registeredResponders.find(notificationName);
-    forward_list<ENotificationResponder*> *forwardList = 0;
+    ENotificationCenterTypeList *list = 0;
 
     if (_registeredResponders.find(notificationName) == _registeredResponders.end())
     {
-        forwardList = new forward_list<ENotificationResponder*>();
-        _registeredResponders.emplace(notificationName, forwardList);
+        list = new ENotificationCenterTypeList();
+        _registeredResponders.insert(ENotificationCenterMapElement(notificationName, list));
     }
     else
     {
-        forwardList = it->second;
+        list = it->second;
     }
 
     // check if notification responder is already registered for this notification
 
-    for (auto listIterator = forwardList->begin(); listIterator != forwardList->end(); ++listIterator)
+    for (auto listIterator = list->begin(); listIterator != list->end(); ++listIterator)
     {
         if (*listIterator == notificationResponder) return;
     }
 
     // add notification responder to forward list for this notification
 
-    forwardList->push_front(notificationResponder);
+    list->push_front(notificationResponder);
 }
 
 // removes notification responder from responder list and call unregister for all notifications he is listening to
@@ -115,11 +115,11 @@ void ENotificationCenter::removeNotificationResponder(ENotificationResponder* no
     {
         cout << "notification: " << respondersIterator->first << endl;
         
-        ENotificationCenterTypeListOfResponders *list = respondersIterator->second;
+        ENotificationCenterTypeList *list = respondersIterator->second;
         
         // find him and find any notifications he is registered for and unregister
         
-        ENotificationCenterTypeListOfResponders::iterator listIterator = list->begin();
+        ENotificationCenterTypeList::iterator listIterator = list->begin();
         while (listIterator != list->end())
         {
             if (*listIterator == notificationResponder)
@@ -161,7 +161,7 @@ void ENotificationCenter::postNotification(ENotification &notification)
 
     // broadcast notification to all notification responders
 
-    ENotificationCenterTypeListOfResponders *list = it->second;
+    ENotificationCenterTypeList *list = it->second;
     assert(list != NULL);
 
     for (auto listIterator = list->begin(); listIterator != list->end(); ++listIterator)

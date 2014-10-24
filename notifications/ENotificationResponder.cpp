@@ -1,5 +1,6 @@
-#include "ENotificationResponder.h"
+#include "notifications/ENotificationResponder.h"
 
+using namespace std;
 
 // Lifecycle
 
@@ -44,12 +45,14 @@ void ENotificationResponder::registerForNotification(const ENotification &notifi
     PRINT_FUNCTION
     if(!E_NOTIFICATION_CENTER_ENABLED) return;
     
-    _notifications.emplace(notification._notificationName, block);
+    //_notifications.emplace(notification._notificationName, block);
+    _notifications.insert(ENotificationResponderMapElement(notification._notificationName, block));
 }
 
 void ENotificationResponder::registerForNotificationName(string &notificationName, EBlock *block)
 {
-    _notifications.emplace(notificationName, block);
+    //_notifications.emplace(notificationName, block);
+    _notifications.insert(ENotificationResponderMapElement(notificationName, block));
 }
 
 void ENotificationResponder::unregisterForNotification(const ENotification &notification)

@@ -4,7 +4,8 @@
 #include <map>
 #include "EObject.h"
 
-using namespace std;
+using std::string;
+using std::map;
 
 class ENotification : public EObject
 {
