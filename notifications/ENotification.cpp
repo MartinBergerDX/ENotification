@@ -14,6 +14,8 @@ ENotification::ENotification(string &notificationName, void *sender, map<string,
 
 ENotification::~ENotification()
 {
+    _sender = 0; // class is not owner of this object
+    if (_userInfo) { delete _userInfo; _userInfo = 0; }
 }
 
 void ENotification::initialize(string &notificationName, void *sender, map<string, void *> *userInfo)

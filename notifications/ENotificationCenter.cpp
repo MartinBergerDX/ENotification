@@ -23,7 +23,7 @@ ENotificationCenter::~ENotificationCenter()
     PRINT_FUNCTION
     if(!E_NOTIFICATION_CENTER_ENABLED) return;
     
-    // unregister all notificaiton responders
+    // unregister all notificaton responders
     
     ENotificationCenterTypeRegisteredResponder::iterator respondersIterator = _registeredResponders.begin();
     while (respondersIterator != _registeredResponders.end())
@@ -36,7 +36,7 @@ ENotificationCenter::~ENotificationCenter()
         }
         
         delete list;
-        _registeredResponders.erase(respondersIterator);
+        _registeredResponders.erase(respondersIterator); // invalidates current iterator
         
         respondersIterator = _registeredResponders.begin();
     }
@@ -93,7 +93,7 @@ void ENotificationCenter::addNotificationResponder(ENotificationResponder* notif
 
     // check if notification responder is already registered for this notification
 
-    for (auto listIterator = list->begin(); listIterator != list->end(); ++listIterator)
+    for (ENotificationCenterTypeList::iterator listIterator = list->begin(); listIterator != list->end(); ++listIterator)
     {
         if (*listIterator == notificationResponder) return;
     }
@@ -113,7 +113,7 @@ void ENotificationCenter::removeNotificationResponder(ENotificationResponder* no
     
     while (respondersIterator != _registeredResponders.end())
     {
-        cout << "notification: " << respondersIterator->first << endl;
+        //cout << "notification: " << respondersIterator->first << endl;
         
         ENotificationCenterTypeList *list = respondersIterator->second;
         
@@ -154,6 +154,10 @@ void ENotificationCenter::postNotification(ENotification &notification)
 {
     if(!E_NOTIFICATION_CENTER_ENABLED) return;
     
+#ifdef E_NOTIFICATION_DEBUG
+    std::cout << "Posting notification: " << notification._notificationName << std::endl;
+#endif
+    
     assert(notification.name().length() > 0);
 
     ENotificationCenterTypeRegisteredResponder::iterator it = _registeredResponders.find(notification.name());
@@ -173,9 +177,13 @@ void ENotificationCenter::postNotification(ENotification &notification)
 void ENotificationCenter::postNotificationName(string &notificationName, void *sender)
 {
     if(!E_NOTIFICATION_CENTER_ENABLED) return;
+    ENotification notification(notificationName);
+    postNotification(notification);
 }
 
 void ENotificationCenter::postNotificationName(string &notificationName, void *sender, map<string, void *> *userInfo)
 {
     if(!E_NOTIFICATION_CENTER_ENABLED) return;
+    ENotification notification(notificationName, NULL, userInfo);
+    postNotification(notification);
 }

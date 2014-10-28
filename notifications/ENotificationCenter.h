@@ -1,16 +1,20 @@
 #ifndef E_NOTIFICATION_CENTER_H_
 #define E_NOTIFICATION_CENTER_H_
 
+// class represent a mp of notifications and list of notification responders.
+// notification is represented by a string.
+// notification responder is represented by his class.
+
+// class is not responsible for state of objects registered as notification responders, meaning it wont manage their memory.
+
 #include <map>
 #include <list>
 #include <iostream>
 
-#include "EBlock.h"
-#include "ENotification.h"
-#include "ENotificationResponder.h"
-#include "EObject.h"
-
-//using namespace std;
+#include "infrastructure/EBlock.h"
+#include "infrastructure/EObject.h"
+#include "notifications/ENotification.h"
+#include "notifications/ENotificationResponder.h"
 
 typedef std::list<ENotificationResponder*>                       ENotificationCenterTypeList;
 typedef std::map<const string, ENotificationCenterTypeList*>     ENotificationCenterTypeRegisteredResponder;

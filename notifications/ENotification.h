@@ -1,8 +1,14 @@
 #pragma once
 
+// wrapper arpund string representation of notification.
+// possibly contains pointer to sender and pointer to user data in form of map.
+
+// class is owner of map, meaning it will delete map's memory on destructor call.
+// class is not owner of sender, if any.
+
 #include <iostream>
 #include <map>
-#include "EObject.h"
+#include "infrastructure/EObject.h"
 
 using std::string;
 using std::map;

@@ -1,4 +1,5 @@
 #include "notifications/ENotificationResponder.h"
+#include "notifications/ENotificationCenter.h"
 
 using namespace std;
 
@@ -27,13 +28,18 @@ void ENotificationResponder::destroy()
     PRINT_FUNCTION
     if(!E_NOTIFICATION_CENTER_ENABLED) return;
 
+#if 0
+    // unregister self from all notifications and release blocks
     map<string, EBlock*>::iterator it = _notifications.begin();
-
     while (it != _notifications.end())
     {
         unregisterForNotificationName((string)it->first);
         it = _notifications.begin();
     }
+#endif
+    
+    // remove this notification responder from notification center
+    ENotificationCenter::defaultCenter()->removeNotificationResponder(this);
 }
 
 
@@ -63,7 +69,7 @@ void ENotificationResponder::unregisterForNotification(const ENotification &noti
     unregisterForNotificationName(notification._notificationName);
 }
 
-// removes notification and block from this notification responder
+// removes notification and deletes block associated with this notification responder
 void ENotificationResponder::unregisterForNotificationName(const string &notificationName)
 {
     PRINT_FUNCTION
@@ -89,8 +95,10 @@ void ENotificationResponder::receiveNotification(ENotification &notification)
     PRINT_FUNCTION
     if(!E_NOTIFICATION_CENTER_ENABLED) return;
 
-    //string &str = notification.name();
     map<string, EBlock*>::iterator iterator = _notifications.find(notification.name());
+    if (iterator == _notifications.end()) return;
+    
     EBlock *block1 = iterator->second;
-    block1->getFunctionNoParams()();
+    //block1->getFunctionNoParams()();
+    block1->execute();
 }

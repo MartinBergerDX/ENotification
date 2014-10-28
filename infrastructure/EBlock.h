@@ -1,5 +1,8 @@
 #pragma once
 
+// wrapper class around pointer to function.
+// use public virtual function execute to invoke function.
+
 #include <iostream>
 #include "EObject.h"
 
